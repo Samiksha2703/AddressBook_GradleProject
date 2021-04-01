@@ -4,3 +4,7 @@ com/bridgelaz/addressbook/Contact.java
  com.bridgelaz.addressbook.Contact
 com/bridgelaz/addressbook/AddressBookIO.java
  com.bridgelaz.addressbook.AddressBookIO
+com/bridgelaz/addressbook/JsonReadWrite.java
+ com.bridgelaz.addressbook.JsonReadWrite
+com/bridgelaz/addressbook/ContactPerson.java
+ com.bridgelaz.addressbook.ContactPerson

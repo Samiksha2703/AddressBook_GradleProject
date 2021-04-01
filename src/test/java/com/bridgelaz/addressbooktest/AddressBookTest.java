@@ -1,8 +1,6 @@
 package com.bridgelaz.addressbooktest;
 
-import com.bridgelaz.addressbook.AddressBookIO;
-import com.bridgelaz.addressbook.Contact;
-import com.bridgelaz.addressbook.OpenCSVReader;
+import com.bridgelaz.addressbook.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -104,4 +102,28 @@ public class AddressBookTest {
         Boolean result = openCSVReader.writeCSVFile(contacts);
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void givenObject_WhenStoredInTheJson_ShouldReturn_TRUE() {
+        ContactPerson contact = new ContactPerson("Samiksha",
+                "Shende",
+                "Sane Guruji Nagar",
+                "Wardha",
+                "Maharastra",
+                442001,
+                "7387555893",
+                "shendesamiksha@rediffmail.com");
+
+        JsonReadWrite jsonReadWrite = new JsonReadWrite();
+        boolean isAdded = jsonReadWrite.jsonWrite(contact);
+        Assertions.assertTrue(isAdded);
+    }
+
+    @Test
+    public void givenJsonFile_WhenRead_ShouldReturn_TRUE() {
+        JsonReadWrite jsonReadWrite = new JsonReadWrite();
+        boolean isRead = jsonReadWrite.jsonRead();
+        Assertions.assertTrue(isRead);
+    }
+
 }

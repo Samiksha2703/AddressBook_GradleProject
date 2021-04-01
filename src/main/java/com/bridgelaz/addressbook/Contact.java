@@ -54,7 +54,17 @@ public class Contact {
         return email;
     }
 
+    @Override
     public String toString() {
-        return this.firstName + this.lastName + this.address + this.city + this.state + this.zip + this.phoneNumber + this.email;
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
