@@ -65,15 +65,14 @@ public class AddressBookIO {
         }
     }
 
-    public boolean veiwContact() {
+    public boolean viewContact() {
         String HOME = System.getProperty("user.dir");
-        String fileName = "AddressBookIO";
+        String fileName = "AddressBookIO.txt";
         Path homePath = Paths.get(HOME);
         if (Files.exists(homePath)) {
             Path filePath = Paths.get(HOME + "/" + fileName);
             if (Files.exists(filePath)) {
-//                    File filename = new File("AddressBookIO.txt");
-                Scanner myReader = new Scanner("AddressBookIO.txt");
+                Scanner myReader = new Scanner(String.valueOf(filePath));
                 while (myReader.hasNextLine()) {
                     String data = myReader.nextLine();
                     System.out.println(data);

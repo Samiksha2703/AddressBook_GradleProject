@@ -1,2 +1,2 @@
-First Name : Samiksha, Last Name : Shende, Address : Sane Guruji Nagar, City : Wardha, State : Maharastra, Zip : 442001, Phone Number : 7387555893, Email : shendesamiksha@rediffmail.com
-First Name : Apurva, Last Name : Yede, Address : Mundwa, City : Pune, State : Maharastra, Zip : 411036, Phone Number : 8668984803, Email : apurvayede@gmail.com
+SamikshaShendeSane Guruji NagarWardhaMaharastra4420017387555893shendesamiksha@rediffmail.com
+ApurvaYedeMundwaPuneMaharastra4110368668984803apurvayede@gmail.com

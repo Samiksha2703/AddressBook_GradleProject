@@ -2,9 +2,11 @@ package com.bridgelaz.addressbooktest;
 
 import com.bridgelaz.addressbook.AddressBookIO;
 import com.bridgelaz.addressbook.Contact;
+import com.bridgelaz.addressbook.OpenCSVReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AddressBookTest {
@@ -62,8 +64,44 @@ public class AddressBookTest {
         contact.add(contact2);
         boolean isAdded = addressBook.addContact(contact);
         if (isAdded) {
-            boolean isRead = addressBook.veiwContact();
+            boolean isRead = addressBook.viewContact();
             Assertions.assertTrue(isRead);
         }
+    }
+
+    @Test
+    public void givenCSVFile_WhenRead_ShouldReturn_True() throws IOException {
+        OpenCSVReader openCSVReader = new OpenCSVReader();
+        Boolean result = openCSVReader.readCSVFile();
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenCSVFile_WhenWritten_ShouldReturn_True() throws IOException {
+        String ADDRESS_BOOK_CSV_FILE_PATH = ".src/test/resources/AddressBook.csv";
+        ArrayList<String[]> contacts = new ArrayList<>();
+        String[] contact1 = {"Samiksha",
+                "Shende",
+                "Sane Guruji Nagar",
+                "Wardha",
+                "Maharastra",
+                "442001",
+                "7387555893",
+                "shendesamiksha@rediffmail.com"};
+
+        String[] contact2 = {"Apurva",
+                "Yede",
+                "Mundwa",
+                "Pune",
+                "Maharastra",
+                "411036",
+                "8668984803",
+                "apurvayede@gmail.com"};
+
+        contacts.add(contact1);
+        contacts.add(contact2);
+        OpenCSVReader openCSVReader = new OpenCSVReader();
+        Boolean result = openCSVReader.writeCSVFile(contacts);
+        Assertions.assertTrue(result);
     }
 }
